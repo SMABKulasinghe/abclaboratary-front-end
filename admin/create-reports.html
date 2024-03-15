@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Skydash Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <div name="navbar" id="navbar"></div>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <div name="sidebar" id="sidebar"></div>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <div class="main-panel">        
+          <div class="content-wrapper">
+            <div class="row">
+              <div class="col-12 grid-margin">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Create Reports</h4>
+                    <form class="form-sample">
+                      <p class="card-description">
+                        Report creation process 
+                      </p>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Report Name</label>
+                            <div class="col-sm-12">
+                              <input type="text" class="form-control" name="reportname" id="reportname"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Report Description</label>
+                            <div class="col-sm-12">
+                              <input type="text" class="form-control" name="reportdescription" id="reportdescription"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="exampleTextarea1">Preperation Details</label>
+                            <textarea class="form-control" name="reportpreperation" id="reportpreperation" rows="4"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <button type="button" class="btn btn-primary mr-2" onclick="addParameter()">Add a Parameter Row</button>
+                          </div>
+                        </div>
+                      </div> -->
+                      <p class="card-description">
+                        Create Parameters for Report
+                      </p>
+                      <div class="row" name="dynamicReportForm" id="dynamicReportForm">
+                        
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Parameter Name</label>
+                            <div class="col-md-12" name="reportnamediv" id="reportnamediv">
+                              <input type="text" class="form-control" name="reportname" id="reportname"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Parameter Scales</label>
+                            <div class="col-md-12" name="scalerangediv" id="scalerangediv">
+                              <select class="form-control" name="scalerange" id="scalerange">
+                                <option>Category1</option>
+                                <option>Category2</option>
+                                <option>Category3</option>
+                                <option>Category4</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>  
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Male Range</label>
+                            <div class="col-md-12" name="malerangediv" id="malerangediv">
+                              <input type="text" class="form-control" name="malerange" id="malerange"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Female Range</label>
+                            <div class="col-md-12" name="femalerangediv" id="femalerangediv">
+                              <input type="text" class="form-control" name="femalerange" id="femalerange"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <button type="button" class="btn btn-primary mr-2" onclick="addParameter()">Add a Parameter Row</button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-12 grid-margin stretch-card">
+                          <div class="card">
+                            <div class="card-body">
+                              <h4 class="card-title">Report Parameter Table</h4>
+                              <!-- <p class="card-description">
+                                Add class <code>.table-striped</code>
+                              </p> -->
+                              <div class="table-responsive">
+                                <table class="table table-striped">
+                                  <thead>
+                                    <tr>
+                                      <th>Parameter Name</th>
+                                      <th>Parameter Scales</th>
+                                      <th>Male Range</th>
+                                      <th>Female Range</th>
+                                      <th>Remove</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody id="parameterTableBody">
+                                    
+                                    
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                      <button class="btn btn-light">Cancel</button>
+                      
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div name="footer" id="footer"></div> 
+        </div>  
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+       
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>   
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todolist.js"></script>
+  <script src="js/select2.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
+  <script src="js/Chart.roundedBarCharts.js"></script>
+  <script src="templatejs/footer.js"></script>
+  <script src="templatejs/navbar.js"></script>
+  <script src="templatejs/sidebar.js"></script>
+  <script src="customjs/create-reports.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+</body>
+
+</html>
+
