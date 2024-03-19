@@ -25,6 +25,7 @@ $(document).ready(function(){
                 sessionStorage.setItem('globalUrl', globalURL);
                 sessionStorage.setItem('userRoleId', response.userrole);
                 sessionStorage.setItem('token', response.token);
+                sessionStorage.setItem('logedin', "logedin");
 
                 if(response.userrole === 1){
 
@@ -36,7 +37,7 @@ $(document).ready(function(){
                 }else if(response.userrole === 2){
                   window.location.replace("admin/admin.html");
                 }else if(response.userrole === 3){
-                  var arrayList = ["admin/admin.html","admin/create-reports.html"];
+                  var arrayList = ["admin/admin.html","admin/create-reports.html","admin/view-reports.html"];
                   var jsonString = JSON.stringify(arrayList);
                   sessionStorage.setItem("pageUrls", jsonString);
                   window.location.replace("admin/admin.html");

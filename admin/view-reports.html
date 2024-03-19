@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Skydash Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="DataTables/media/js/jquery.dataTables.min.js"></script>
+    
+  <link rel="stylesheet" type="text/css" href="modal.css">
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <div name="navbar" id="navbar"></div>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <div name="sidebar" id="sidebar"></div>
+      
+      <div class="container-fluid page-body-wrapper">
+        <div class="main-panel">        
+          <div class="content-wrapper">
+            <div class="row">
+              <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">View Reports</h4>
+                    <p class="card-description">
+                      View / Update Reports
+                    </p>
+                    <div class="table-responsive">
+                      <table class="table table-striped" id="reportTables">
+                        <thead>
+                          <tr>
+                            <th>
+                              #
+                            </th>
+                            <th>
+                              Report Name
+                            </th>
+                            <th>
+                              Report Description
+                            </th>
+                            <th>
+                              Report Preperation
+                            </th>
+                            <th>
+                              Status
+                            </th>
+                            <th>
+                              Show Parameters
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div name="footer" id="footer"></div> 
+        </div>  
+        
+      </div>
+      <!-- main-panel ends -->
+    </div>   
+    <!-- page-body-wrapper ends -->
+  </div>
+
+  <!-- <div id="myModal" class="modal">
+    <div class="modal-content">
+      <button class="btn btn-danger mr-2" onclick="closeModel()">Close</button>
+      <p>This is a modal window. You can close it by clicking the X button or outside the modal.</p>
+    </div>
+  </div> -->
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <h3>Parameter List of Reports</h3>
+        
+      </div>
+      <div class="modal-body">
+        <div id="modalCustom">
+          <h5></h5>
+          <p></p>
+        </div>
+        
+        <div class="table-responsive">
+          <table class="table table-striped" id="parameterTable">
+            <thead>
+              <tr>
+                <th>
+                  #
+                </th>
+                <th>
+                  Parameter Name
+                </th>
+                <th>
+                  Parameter Description
+                </th>
+                <th>
+                  Male Range
+                </th>
+                <th>
+                  Female Range
+                </th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+      
+      <div class="modal-footer" id="modalFooter">
+        <!-- <h3>Modal Footer</h3> -->
+        <div>
+          
+        </div>
+        
+        <button class="btn btn-danger mr-2" onclick="closeModel()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  <!-- <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="js/dataTables.select.min.js"></script> -->
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
+  <script src="js/Chart.roundedBarCharts.js"></script>
+  <script src="templatejs/footer.js"></script>
+  <script src="templatejs/navbar.js"></script>
+  <script src="templatejs/sidebar.js"></script>
+  <script src="customjs/view-reports.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+</body>
+
+</html>
+

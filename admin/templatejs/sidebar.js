@@ -15,8 +15,7 @@ $("#sidebar").append( '<nav class="sidebar sidebar-offcanvas" id="sidebar">'+
     '<div class="collapse" id="ui-basic">'+
       '<ul class="nav flex-column sub-menu">'+
         '<li class="nav-item"> <a class="nav-link" href="create-reports.html">Create Reports</a></li>'+
-        '<li class="nav-item"> <a class="nav-link" href="admin2.html">Dropdowns</a></li>'+
-        '<li class="nav-item"> <a class="nav-link" href="admin3.html">Typography</a></li>'+
+        '<li class="nav-item"> <a class="nav-link" href="view-reports.html">View Reports</a></li>'+
       '</ul>'+
     '</div>'+
   '</li>'+
