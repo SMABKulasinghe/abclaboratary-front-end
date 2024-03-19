@@ -78,6 +78,8 @@ $(document).ready(function() {
             // Clear sessionStorage token
             sessionStorage.removeItem('token');
             sessionStorage.removeItem('pageUrls');
+            sessionStorage.removeItem('userRoleId');
+            sessionStorage.removeItem('logedin');
             // Redirect to login page
             location.reload();
         });

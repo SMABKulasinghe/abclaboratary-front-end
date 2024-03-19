@@ -69,25 +69,26 @@
                         <div class="col-md-6">
                           <div class="form-group row">
                             <label class="col-sm-6 col-form-label">Report Name</label>
-                            <div class="col-sm-12">
-                              <input type="text" class="form-control" name="reportname" id="reportname"/>
+                            <div class="col-sm-12" name="reportnamediv" id="reportnamediv">
+                              <input type="text" class="form-control" name="reportname" id="reportname" required/>
                             </div>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="form-group row">
                             <label class="col-sm-6 col-form-label">Report Description</label>
-                            <div class="col-sm-12">
-                              <input type="text" class="form-control" name="reportdescription" id="reportdescription"/>
+                            <div class="col-sm-12" name="reportdescriptiondiv" id="reportdescriptiondiv">
+                              <input type="text" class="form-control" name="reportdescription" id="reportdescription" required/>
                             </div>
                           </div>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-md-12">
-                          <div class="form-group">
+                          <div class="form-group" name="reportpreperationdiv" id="reportpreperationdiv">
                             <label for="exampleTextarea1">Preperation Details</label>
-                            <textarea class="form-control" name="reportpreperation" id="reportpreperation" rows="4"></textarea>
+                            <!-- <textarea class="form-control" name="reportpreperation" id="reportpreperation" rows="4"></textarea> -->
+                            <input type="text" class="form-control" name="reportpreperation" id="reportpreperation" required/>
                           </div>
                         </div>
                       </div>
@@ -98,16 +99,17 @@
                           </div>
                         </div>
                       </div> -->
+                      <h4 class="card-title">Create Parameters for Report</h4>
                       <p class="card-description">
-                        Create Parameters for Report
+                        Please add parameters to the below table
                       </p>
                       <div class="row" name="dynamicReportForm" id="dynamicReportForm">
                         
                         <div class="col-md-6">
                           <div class="form-group row">
                             <label class="col-sm-6 col-form-label">Parameter Name</label>
-                            <div class="col-md-12" name="reportnamediv" id="reportnamediv">
-                              <input type="text" class="form-control" name="reportname" id="reportname"/>
+                            <div class="col-md-12" name="parameternamediv" id="parameternamediv">
+                              <input type="text" class="form-control" name="parametername" id="parametername"/>
                             </div>
                           </div>
                         </div>
@@ -181,7 +183,8 @@
                       <br>
                       <br>
                       <br>
-                      <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                      
+                      <button type="button" class="btn btn-primary mr-2" onclick="submitreport()">Submit</button>
                       <button class="btn btn-light">Cancel</button>
                       
                     </form>
