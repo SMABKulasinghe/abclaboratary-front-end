@@ -25,11 +25,12 @@ $(document).ready(function(){
                 sessionStorage.setItem('globalUrl', globalURL);
                 sessionStorage.setItem('userRoleId', response.userrole);
                 sessionStorage.setItem('token', response.token);
+                sessionStorage.setItem('userdata', response.userdata);
                 sessionStorage.setItem('logedin', "logedin");
 
                 if(response.userrole === 1){
 
-                  var arrayList = ["reports.html"];
+                  var arrayList = ["reports.html","book-appoinment.html"];
                   var jsonString = JSON.stringify(arrayList);
                   sessionStorage.setItem("pageUrls", jsonString);
                   window.location.replace("index.html");
