@@ -57,6 +57,9 @@ $(document).ready(function() {
           '<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>' +
           '</li>' +
           '<li class="nav-item">' +
+          '<a class="nav-link" href="book-appoinment.html">Book Appoinment</a>' +
+          '</li>' +
+          '<li class="nav-item">' +
           '<a class="nav-link" href="reports.html">Reports</a>' +
           '</li>' +
           '<li class="nav-item">' +
@@ -80,6 +83,7 @@ $(document).ready(function() {
             sessionStorage.removeItem('pageUrls');
             sessionStorage.removeItem('userRoleId');
             sessionStorage.removeItem('logedin');
+            sessionStorage.removeItem('userdata');
             // Redirect to login page
             location.reload();
         });

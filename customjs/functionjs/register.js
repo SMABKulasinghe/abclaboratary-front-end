@@ -2,7 +2,8 @@ $(document).ready(function() {
   $('#registrationForm').submit(function(event) {
       event.preventDefault();
 
-      var globalURL = "http://localhost:8080";
+      var token = sessionStorage.getItem('token');
+      var globalURL = sessionStorage.getItem('globalUrl');
       
       var formData = {
           name: $('#name').val(),
