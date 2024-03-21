@@ -28,7 +28,7 @@ $("#sidebar").append( '<nav class="sidebar sidebar-offcanvas" id="sidebar">'+
     '<div class="collapse" id="appoinmentspan">'+
       '<ul class="nav flex-column sub-menu">'+
         '<li class="nav-item"> <a class="nav-link" href="#">Check Appoinments</a></li>'+
-        '<li class="nav-item"> <a class="nav-link" href="#">Submit Reports for <br>Appoinment</a></li>'+
+        '<li class="nav-item"> <a class="nav-link" href="submit-report-for-appoinment.html">Submit Reports for <br>Appoinment</a></li>'+
       '</ul>'+
     '</div>'+
   '</li>'+

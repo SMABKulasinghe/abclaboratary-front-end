@@ -31,7 +31,7 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-
+  <link rel="stylesheet" type="text/css" href="modal.css">
 </head>
 
 <body class="sub_page">
@@ -53,60 +53,21 @@
       <div class="row">
         <div class="col-md-12 ">
           <div class="form_container contact-form">
-            <table class="table">
+            <table class="table" id="reportTables">
               <thead>
                 <tr>
                   <th scope="col">#</th>
-                  <th scope="col">First</th>
-                  <th scope="col">Last</th>
-                  <th scope="col">Handle</th>
+                  <th scope="col">Appoinment No</th>
+                  <th scope="col">Report Description</th>
+                  <th scope="col">Report Preperation</th>
+                  <th scope="col">Appoinment Date</th>
+                  <th scope="col">Status</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td colspan="2">Larry the Bird</td>
-                  <td>@twitter</td>
-                </tr>
+                
               </tbody>
             </table>
-            <!-- <form action="">
-              <div class="form-row">
-                <div class="col-lg-6">
-                  <div>
-                    <input type="text" placeholder="Your Name" />
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div>
-                    <input type="text" placeholder="Phone Number" />
-                  </div>
-                </div>
-              </div>
-              <div>
-                <input type="email" placeholder="Email" />
-              </div>
-              <div>
-                <input type="text" class="message-box" placeholder="Message" />
-              </div>
-              <div class="btn_box">
-                <button>
-                  SEND
-                </button>
-              </div>
-            </form> -->
           </div>
         </div>
       </div>
@@ -117,6 +78,61 @@
   <!-- footer section -->
   <div name="footer" id="footer"></div>
   <!-- footer section -->
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <h3>Your Report Detail</h3>
+        
+      </div>
+      <div class="modal-body">
+        <div id="modalCustom">
+          <h5></h5>
+          <p></p>
+        </div>
+        
+        <div class="table-responsive" id="for_pdf">
+          <table class="table table-striped" id="parameterTable">
+            <thead>
+              <tr>
+                <th>
+                  #
+                </th>
+                <th>
+                  Parameter Name
+                </th>
+                <th>
+                  Parameter Scale
+                </th>
+                <th>
+                  Range
+                </th>
+                <th>
+                  Result
+                </th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+      
+      <div class="modal-footer" id="modalFooter">
+        <!-- <h3>Modal Footer</h3> -->
+        <div>
+          
+        </div>
+        <button class="btn btn-warning mr-2" onclick="downloadPdf()">Download PDF</button>
+        <!-- <button class="btn btn-warning mr-2" onclick="testemail()">testemail</button> -->
+        <button class="btn btn-danger mr-2" onclick="closeModel()">Close</button>
+      </div>
+    </div>
+  </div>
 
   <!-- jQery -->
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
