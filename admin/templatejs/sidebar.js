@@ -7,6 +7,19 @@ $("#sidebar").append( '<nav class="sidebar sidebar-offcanvas" id="sidebar">'+
     '</a>'+
   '</li>'+
   '<li class="nav-item">'+
+    '<a class="nav-link" data-toggle="collapse" href="#userspan" aria-expanded="false" aria-controls="userspan">'+
+      '<i class="icon-layout menu-icon"></i>'+
+      '<span class="menu-title">User Registration</span>'+
+      '<i class="menu-arrow"></i>'+
+    '</a>'+
+    '<div class="collapse" id="userspan">'+
+      '<ul class="nav flex-column sub-menu">'+
+        '<li class="nav-item"> <a class="nav-link" href="user-registration.html">Doctor/Technicians <Br> Registration</a></li>'+
+        
+      '</ul>'+
+    '</div>'+
+  '</li>'+
+  '<li class="nav-item">'+
     '<a class="nav-link" data-toggle="collapse" href="#reportsspan" aria-expanded="false" aria-controls="reportsspan">'+
       '<i class="icon-paper menu-icon"></i>'+
       '<span class="menu-title">Reports</span>'+
