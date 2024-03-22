@@ -12,6 +12,7 @@ $(document).ready(function() {
           dob: $('#dob').val(),
           password: $('#password').val(),
           repassword: $('#repassword').val(),
+          gender: $('#gender').val(),
           userRole: $('#userRole').val()
       };
 
@@ -41,7 +42,7 @@ $(document).ready(function() {
                   confirmButtonText: 'OK'
                 }).then(function(result) {
                   // Reload the page and clear the form fields
-                  location.reload();
+                  window.location.replace("login.html");
                 });
 
               }else{

@@ -22,12 +22,12 @@ $(document).ready(function() {
           '<li class="nav-item active">' +
           '<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>' +
           '</li>' +
-          '<li class="nav-item">' +
-          '<a class="nav-link" href="doctors.html">Doctors</a>' +
-          '</li>' +
-          '<li class="nav-item">' +
-          '<a class="nav-link" href="contact.html">Contact Us</a>' +
-          '</li>' +
+          // '<li class="nav-item">' +
+          // '<a class="nav-link" href="doctors.html">Doctors</a>' +
+          // '</li>' +
+          // '<li class="nav-item">' +
+          // '<a class="nav-link" href="contact.html">Contact Us</a>' +
+          // '</li>' +
           '<li class="nav-item">' +
           '<a class="nav-link" href="login.html">Login</a>' +
           '</li>' +
@@ -62,12 +62,12 @@ $(document).ready(function() {
           '<li class="nav-item">' +
           '<a class="nav-link" href="reports.html">Reports</a>' +
           '</li>' +
-          '<li class="nav-item">' +
-          '<a class="nav-link" href="doctors.html">Doctors</a>' +
-          '</li>' +
-          '<li class="nav-item">' +
-          '<a class="nav-link" href="contact.html">Contact Us</a>' +
-          '</li>' +
+          // '<li class="nav-item">' +
+          // '<a class="nav-link" href="doctors.html">Doctors</a>' +
+          // '</li>' +
+          // '<li class="nav-item">' +
+          // '<a class="nav-link" href="contact.html">Contact Us</a>' +
+          // '</li>' +
           '<li class="nav-item">' +
           '<button class="btn btn-link nav-link logout-btn">Logout</button>' +
           '</li>' +
