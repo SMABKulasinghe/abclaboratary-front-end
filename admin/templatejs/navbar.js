@@ -70,16 +70,16 @@ $("#navbar").append( '<nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex f
     // '</li>'+
     '<li class="nav-item nav-profile dropdown">'+
       '<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">'+
-        '<img src="images/faces/face28.jpg" alt="profile"/>'+
+        '<img src="images/faces/profile.png" alt="profile"/>'+
       '</a>'+
       '<div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">'+
-        '<a class="dropdown-item">'+
-          '<i class="ti-settings text-primary"></i>'+
-          'Settings'+
-        '</a>'+
-        '<a class="dropdown-item">'+
-          '<i class="ti-power-off text-primary"></i>'+
-          'Logout'+
+        // '<a class="dropdown-item">'+
+        //   '<i class="ti-settings text-primary"></i>'+
+        //   'Settings'+
+        // '</a>'+
+        '<a class="dropdown-item"><button class="btn btn-link nav-link logout-btn" id="logout-btn" name="logout-btn">Logout</button>'+
+          // '<i class="ti-power-off text-primary id="logout-btn" name="logout-btn"></i>'+
+          // 'Logout'+
         '</a>'+
       '</div>'+
     '</li>'+
@@ -94,3 +94,14 @@ $("#navbar").append( '<nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex f
   '</button>'+
 '</div>'+
 '</nav>');
+
+$("#logout-btn").click(function() {
+  // Clear sessionStorage token
+  sessionStorage.removeItem('token');
+  sessionStorage.removeItem('pageUrls');
+  sessionStorage.removeItem('userRoleId');
+  sessionStorage.removeItem('logedin');
+  sessionStorage.removeItem('userdata');
+  // Redirect to login page
+  location.reload();
+});
