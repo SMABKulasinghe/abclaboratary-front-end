@@ -8,7 +8,7 @@ $("#sidebar").append( '<nav class="sidebar sidebar-offcanvas" id="sidebar">'+
   '</li>'+
   '<li class="nav-item">'+
     '<a class="nav-link" data-toggle="collapse" href="#reportsspan" aria-expanded="false" aria-controls="reportsspan">'+
-      '<i class="icon-layout menu-icon"></i>'+
+      '<i class="icon-paper menu-icon"></i>'+
       '<span class="menu-title">Reports</span>'+
       '<i class="menu-arrow"></i>'+
     '</a>'+
@@ -27,7 +27,6 @@ $("#sidebar").append( '<nav class="sidebar sidebar-offcanvas" id="sidebar">'+
     '</a>'+
     '<div class="collapse" id="appoinmentspan">'+
       '<ul class="nav flex-column sub-menu">'+
-        '<li class="nav-item"> <a class="nav-link" href="#">Check Appoinments</a></li>'+
         '<li class="nav-item"> <a class="nav-link" href="submit-report-for-appoinment.html">Submit Reports for <br>Appoinment</a></li>'+
       '</ul>'+
     '</div>'+

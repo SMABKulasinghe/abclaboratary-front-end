@@ -103,6 +103,15 @@
   <div name="footer" id="footer"></div>
   <!-- footer section -->
 
+  <script>
+    // Set the minimum date to today + 1 day
+    const today = new Date();
+    today.setDate(today.getDate() + 1);
+  
+    const minDate = today.toISOString().split('T')[0];
+    document.getElementById('appoinmentDate').setAttribute('min', minDate);
+  </script>
+
   <!-- jQery -->
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <!-- popper js -->
