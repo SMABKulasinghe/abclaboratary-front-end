@@ -39,7 +39,7 @@ $(document).ready(function(){
                   window.location.replace("admin/admin.html");
                 }else if(response.userrole === 3){
                   var arrayList = ["admin/admin.html","admin/create-reports.html","admin/view-reports.html",
-                  "admin/submit-report-for-appoinment.html"];
+                  "admin/submit-report-for-appoinment.html","admin/user-registration.html"];
                   var jsonString = JSON.stringify(arrayList);
                   sessionStorage.setItem("pageUrls", jsonString);
                   window.location.replace("admin/admin.html");
